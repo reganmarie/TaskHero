@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo Lists</title>
+</head>
+<body>
+<main>
+<div>
+    <h1>{{ details.name }}</h1>
+    <p>{{ details.description }}</p>
+    <h2>Tasks</h2>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Assignee</th>
+            <th>Start date</th>
+            <th>Due date</th>
+            <th>Is completed</th>
+        </thead>
+        <tbody>
+            {% for detail in details.tasks.all %}
+                <tr>
+                    <td>{{ detail.name }}</td>
+                    <td>{{ detail.assignee }}</td>
+                    <td>{{ detail.start_date }}</td>
+                    <td>{{ detail.due_date }}</td>
+                    <td>{{ detail.is_completed|yesno }}</td>
+                </tr>
+                {% empty %}
+                <p>This project has no tasks</p>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</main>
+</body>
+</html>
