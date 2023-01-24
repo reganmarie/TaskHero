@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Document</title>
-</head>
-<body>
-<main>
-<div>
-    <h1>My Tasks</h1>
-    <table>
-        <thead>
-            <th>Name</th>
-            <th>Start date</th>
-            <th>Due date</th>
-            <th>Is completed</th>
-        </thead>
-        <tbody>
-            {% for task in tasks.all %}
-                <tr>
-                    <td>{{ task.name }}</td>
-                    <td>{{ task.start_date }}</td>
-                    <td>{{ task.due_date }}</td>
-                    <td>{{ task.is_completed|yesno }}</td>
-                </tr>
-                {% empty %}
-                <p>You have no tasks</p>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
-</main>
-</body>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                        <li>
+                            <a href="{% url 'show_my_tasks' %}">My tasks</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'list_projects' %}">My projects</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{% url 'login' %}">Login</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'signup' %}">Sign Up</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <h1>My Tasks</h1>
+                <table>
+                    <thead>
+                        <th>Name</th>
+                        <th>Start date</th>
+                        <th>Due date</th>
+                        <th>Is completed</th>
+                    </thead>
+                    <tbody>
+                        {% for task in tasks.all %}
+                            <tr>
+                                <td>{{ task.name }}</td>
+                                <td>{{ task.start_date }}</td>
+                                <td>{{ task.due_date }}</td>
+                                <td>{{ task.is_completed|yesno }}</td>
+                            </tr>
+                        {% empty %}
+                            <p>You have no tasks</p>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </body>
 </html>
