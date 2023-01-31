@@ -17,14 +17,16 @@
                         <th>Start date</th>
                         <th>Due date</th>
                         <th>Is completed</th>
+                        <th>Edit Task</th>
                     </thead>
                     <tbody>
                         {% for task in tasks.all %}
                             <tr>
-                                <td>{{ task.name }}</td>
-                                <td>{{ task.start_date }}</td>
-                                <td>{{ task.due_date }}</td>
+                                <td><a href="{% url 'task_notes' task.id %}">{{ task.name }}</a></td>
+                                <td>{{ task.start_date|date:"n/j/y" }}</td>
+                                <td>{{ task.due_date|date:"n/j/y" }}</td>
                                 <td>{{ task.is_completed|yesno }}</td>
+                                <td><a href="{% url 'edit_tasks' task.id %}">Edit</a></td>
                             </tr>
                         {% empty %}
                             <p>You have no tasks</p>

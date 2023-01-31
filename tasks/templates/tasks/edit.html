@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Edit My Task
+{% endblock title %}
+
+{% block content %}
+<main>
+    <div class="task-form">
+        <h1>Edit your task</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Update</button>
+        </form>
+    </div>
+</main>
+{% endblock content %}

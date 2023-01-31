@@ -10,6 +10,7 @@ class Task(models.Model):
     start_date = models.DateTimeField()
     due_date = models.DateTimeField()
     is_completed = models.BooleanField(default=False)
+    notes = models.TextField(null=True)
 
     project = models.ForeignKey(
         Project,

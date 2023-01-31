@@ -20,15 +20,17 @@
                         <th>Start date</th>
                         <th>Due date</th>
                         <th>Is completed</th>
+                        <th>Add notes</th>
                     </thead>
                     <tbody>
                         {% for detail in details.tasks.all %}
                             <tr>
-                                <td>{{ detail.name }}</td>
+                                <td><a href="{% url 'edit_tasks' detail.id %}">{{ detail.name }}</a></td>
                                 <td>{{ detail.assignee }}</td>
-                                <td>{{ detail.start_date }}</td>
-                                <td>{{ detail.due_date }}</td>
+                                <td>{{ detail.start_date|date:"n/j/y" }}</td>
+                                <td>{{ detail.due_date|date:"n/j/y" }}</td>
                                 <td>{{ detail.is_completed|yesno }}</td>
+                                <td><a href="{% url 'task_notes' detail.id %}">Task notes</a></td>
                             </tr>
                         {% empty %}
                             <p>This project has no tasks</p>
