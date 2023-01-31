@@ -1,36 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Document</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    {% if user.is_authenticated %}
-                        <li>
-                            <a href="{% url 'show_my_tasks' %}">My tasks</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'list_projects' %}">My projects</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'logout' %}">Logout</a>
-                        </li>
-                    {% else %}
-                        <li>
-                            <a href="{% url 'login' %}">Login</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'signup' %}">Sign Up</a>
-                        </li>
-                    {% endif %}
-                </ul>
-            </nav>
-        </header>
+{% extends 'base.html' %}
+{% block title %}
+   Signup
+{% endblock title %}
+
+{% block content %}
         <main>
             <h1>Signup</h1>
-            <div>
+            <div class="signup-form">
                 <form method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
@@ -38,5 +14,4 @@
                 </form>
             </div>
         </main>
-    </body>
-</html>
+{% endblock content %}
