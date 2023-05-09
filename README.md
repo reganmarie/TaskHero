@@ -18,13 +18,13 @@ TaskHero is a web application designed to help users manage their tasks more eff
 
 *Technologies Used:*
 
-Django: Django is a powerful Python web framework that provides a solid foundation for building complex web applications.
+- Django: Django is a powerful Python web framework that provides a solid foundation for building complex web applications.
 
-HTML/CSS/JavaScript: Django Task Manager uses HTML, CSS, and JavaScript to create a responsive, user-friendly interface.
+- HTML/CSS/JavaScript: Django Task Manager uses HTML, CSS, and JavaScript to create a responsive, user-friendly interface.
 
-PostgreSQL: PostgreSQL is a powerful open-source database that is used to store user data and task information.
+- PostgreSQL: PostgreSQL is a powerful open-source database that is used to store user data and task information.
 
-Git: Git is a version control system that is used to manage changes to the application codebase.
+- Git: Git is a version control system that is used to manage changes to the application codebase.
 
 *Conclusion:*
 
