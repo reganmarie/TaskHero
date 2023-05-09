@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Remove Task
+{% endblock title %}
+
+{% block content %}
+<main>
+    <div>
+        <h1>Are you sure?</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button>Remove</button>
+          </form>
+    </div>
+    </main>
+{% endblock content %}

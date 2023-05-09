@@ -64,3 +64,12 @@ def task_notes(request, id):
         "form": form,
     }
     return render(request, "tasks/notes.html", context)
+
+
+@login_required
+def delete_task(request, id):
+    task = Task.objects.get(id=id)
+    if request.method == "POST":
+        task.delete()
+        return redirect("show_my_tasks")
+    return render(request, "tasks/delete.html")

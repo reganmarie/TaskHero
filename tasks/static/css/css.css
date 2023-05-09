@@ -14,11 +14,8 @@ select {
 }
 
 a {
-    color: #8C6E5D;
-}
-
-.header_links {
-    color: #594432
+    color: #97c5f3;
+    text-decoration: none;
 }
 
 a:visited {
@@ -26,17 +23,17 @@ a:visited {
 }
 
 a:hover {
-    color: #F2EDDC
+    color: #115965
 }
 
 html,
 body {
-    background-color: #F2EDDC;
+    background-color: #f5f2f2;
 }
 
 header nav ul {
-    background-color: #A3A692;
-    border-bottom: 1px solid #594432;
+    background-color: #97c5f3;
+    border-bottom: 1px solid #ffffff;
     box-sizing: border-box;
     list-style: none;
     margin-top: 0;
@@ -47,6 +44,7 @@ header nav ul {
 header nav ul li a {
     font-weight: 700;
     text-decoration: none;
+    color: #f5f2f2
 }
 
 input {
@@ -83,7 +81,7 @@ table {
 /* Make the login and sign-up forms look nicer */
 .login-form,
 .signup-form {
-    background-color: #D9D4BA;
+    background-color: #f5f2f2;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: auto;
@@ -94,7 +92,7 @@ table {
 /* Make the task and projects forms look nicer */
 .task-form,
 .project-form {
-    background-color: #D9D4BA;
+    background-color: #f5f2f2;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: auto;
@@ -150,7 +148,7 @@ table {
 .my-tasks-list,
 .project-list,
 .project-detail {
-    background-color: #D9D4BA;
+    background-color: #f5f2f2;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: auto;
@@ -172,7 +170,7 @@ table {
 .my-tasks-list thead tr th,
 .project-list thead tr th,
 .project-detail thead tr th {
-    border-bottom: 2px solid #F2EDDC
+    border-bottom: 2px solid #fcfcfc
 }
 
 /* Center align the text on specific table header cells */
@@ -191,5 +189,12 @@ table {
 .my-tasks-list tbody :not(tr:last-child) td,
 .project-list tbody :not(tr:last-child) td,
 .project-detail tbody :not(tr:last-child) td {
-    border-bottom: 1px solid #F2EDDC;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Alignment for the 'remove task' button */
+.remove-task {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: black;
 }

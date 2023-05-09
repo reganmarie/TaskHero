@@ -18,6 +18,7 @@
                         <th>Due date</th>
                         <th>Is completed</th>
                         <th>Edit Task</th>
+                        <th>Remove Task</th>
                     </thead>
                     <tbody>
                         {% for task in tasks.all %}
@@ -27,6 +28,7 @@
                                 <td>{{ task.due_date|date:"n/j/y" }}</td>
                                 <td>{{ task.is_completed|yesno }}</td>
                                 <td><a href="{% url 'edit_tasks' task.id %}">Edit</a></td>
+                                <td><a href="{% url 'delete_task' task.id %}">Remove</a></td>
                             </tr>
                         {% empty %}
                             <p>You have no tasks</p>

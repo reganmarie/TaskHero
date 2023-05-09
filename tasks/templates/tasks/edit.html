@@ -14,5 +14,12 @@
             <button>Update</button>
         </form>
     </div>
+    <div class="remove-task">
+        <p>
+        <button>
+            <a href="{% url 'delete_task' task.id %}">Remove Task</a>
+        </button>
+        </p>
+    </div>
 </main>
 {% endblock content %}
