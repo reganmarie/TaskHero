@@ -1,4 +1,4 @@
-## TaskHero, Task Management application
+## TaskHero, Task Management Application
 
 ### Project Description
 
