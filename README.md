@@ -30,6 +30,10 @@ TaskHero is a web application designed to help users manage their tasks more eff
 
 Django Task Manager is a powerful, easy-to-use task management application built using Django. With its user-friendly interface and key features such as project and task management, task status tracking, and user authentication, the application helps users stay organized and focused on their goals.
 
+### Video Walkthrough of Application
+
+[TaskHero Video Walkthrough](https://youtu.be/xX7eZ7xueHE)
+
 ### Installation
 - Fork the project
 - Press 'Clone' and press the copy button
